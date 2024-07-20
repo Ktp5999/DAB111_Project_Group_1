@@ -1,22 +1,32 @@
-# DAB111_Project_Group_1
 
-## Description
-This project collects data, stores it in a SQLite database, and serves it via a Flask website.
+- `app.py`: The main Flask application file that initializes the app and registers the blueprints for different routes.
+- `routes/`: Directory containing separate route files for each section.
+  - `home.py`: Handles the Home page route.
+  - `about.py`: Handles the About page route.
+  - `data.py`: Handles the Data page route.
+- `templates/`: Directory containing HTML templates for each section.
+  - `base.html`: Base HTML structure that is extended by other templates.
+  - `home.html`: HTML template for the Home page.
+  - `about.html`: HTML template for the About page.
+  - `data.html`: HTML template for the Data page.
+
+## Dataset
+
+The dataset used in this project is a cleaned version of the original Netflix dataset, which contains information about contents added to Netflix from 2008 to 2021.
 
 ## Setup
-1. Install required packages:
-    ```sh
-    pip install -r requirements.txt
-    ```
-2. Run the Flask app:
-    ```sh
-    python app.py
-    ```
 
-## Data Source
-The dataset used is from [UCI Machine Learning Repository](https://archive.ics.uci.edu/).
+### Prerequisites
 
-## Variables
-- Variable 1: Description
-- Variable 2: Description
-- ...
+- Python 3.x
+- Flask
+- Pandas
+- SQLite3
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone <repository-url>
+cd project
