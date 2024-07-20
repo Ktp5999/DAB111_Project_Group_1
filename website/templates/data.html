@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Full Data Sample</h2>
+{{ data|safe }}
+<h3>First 5 Records from the Database</h3>
+{{ data_movies|safe }}
+
+<h3>Operations Summary</h3>
+<p><strong>Total Movie Count:</strong> {{ movie_count }}</p>
+<p><strong>Average Release Year:</strong> {{ avg_release_year | round(0) }}</p>
+<p><strong>Rating Counts:</strong></p>
+<ul>
+    {% for rating, count in rating_counts.items() %}
+    <li>{{ rating }}: {{ count }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

@@ -30,3 +30,4 @@ The dataset used in this project is a cleaned version of the original Netflix da
 ```bash
 git clone <repository-url>
 cd project
+
