@@ -47,7 +47,14 @@ def home():
         <div class="container">
             <h2>Project Overview</h2>
             <p>Netflix is a popular streaming service that offers a vast catalog of movies, TV shows, and original contents. This dataset is a cleaned version of the original version which can be found here. The data consist of contents added to Netflix from 2008 to 2021. The oldest content is as old as 1925 and the newest as 2021.</p>
-            <p>My name is Mr. Krunal and welcome to my page.</p>
+            <h2>Group Information</h2>
+            <p>Group Number: 1</p>
+            <p>Group Members:</p>
+            <ul>
+                <li>Krunal Patel : 0867639 </li>
+                <li>Parth Bhavsar : 0867978 </li>
+                <li>Akil Selot : 0868327</li>
+            </ul>
         </div>
     </body>
     </html>
