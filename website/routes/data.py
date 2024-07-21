@@ -1,10 +1,7 @@
+from flask import render_template_string
 import sqlite3
 import pandas as pd
-from flask import Blueprint, render_template
 
-data_bp = Blueprint('data', __name__)
-
-@data_bp.route('/data')
 def data():
     # Connect to SQLite database and fetch data
     con = sqlite3.connect('Netflix.db')
@@ -36,5 +33,64 @@ def data():
     
     con.close()
 
-    return render_template('data.html', data=data_html, data_movies=data_movies_html, movie_count=movie_count, avg_release_year=avg_release_year, rating_counts=rating_counts)
-
+    return render_template_string('''
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Data - DAB111 Project Group 1</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <style>
+            body {
+                background-color: #f8f9fa;
+            }
+            header {
+                background-color: #343a40;
+                color: white;
+                padding: 10px 0;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            nav a {
+                color: white;
+                margin: 0 10px;
+                padding: 10px 20px;
+                border-radius: 5px;
+                background-color: #007bff;
+                transition: background-color 0.3s, transform 0.3s;
+            }
+            nav a:hover {
+                background-color: #0056b3;
+                transform: scale(1.1);
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Data - DAB111 Project Group 1</h1>
+            <nav class="nav justify-content-center">
+                <a class="nav-link" href="/">Home</a>
+                <a class="nav-link" href="/about">About</a>
+                <a class="nav-link" href="/data">Data</a>
+            </nav>
+        </header>
+        <div class="container">
+            <h2>Full Data Sample</h2>
+            {{ data|safe }}
+            <h3>First 5 Records from the Database</h3>
+            {{ data_movies|safe }}
+            
+            <h3>Operations Summary</h3>
+            <p><strong>Total Movie Count:</strong> {{ movie_count }}</p>
+            <p><strong>Average Release Year:</strong> {{ avg_release_year | round(0) }}</p>
+            <p><strong>Rating Counts:</strong></p>
+            <ul>
+                {% for rating, count in rating_counts.items() %}
+                <li>{{ rating }}: {{ count }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </body>
+    </html>
+    ''', data=data_html, data_movies=data_movies_html, movie_count=movie_count, avg_release_year=avg_release_year, rating_counts=rating_counts)
