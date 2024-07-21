@@ -1,5 +1,6 @@
 from flask import render_template_string
 
+@app.route('/home')
 def home():
     return render_template_string('''
     <!DOCTYPE html>
