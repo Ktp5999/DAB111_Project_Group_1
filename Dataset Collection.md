@@ -7,7 +7,7 @@ This document outlines the data collection process for the DAB111 Project Group 
 ## Data Source
 
 - **Source**: Kaggle
-- **Dataset**: [Netflix Shows](https://www.kaggle.com/datasets/shivamb/netflix-shows)
+- **Dataset**: [Netflix Shows](https://www.kaggle.com/datasets/shivamb/netflix-shows](https://www.kaggle.com/datasets/ariyoomotade/netflix-data-cleaning-analysis-and-visualization))
   - **Description**: This dataset includes various details about movies and TV shows available on Netflix, such as show ID, type, title, director, country, date added, release year, rating, duration, and listed-in categories.
 
 ## Dataset Details
@@ -33,10 +33,7 @@ The dataset contains the following columns:
 2. **Inspecting the Data**:
    - The dataset was inspected to ensure it contained the required variables and data types.
 
-3. **Data Cleaning**:
-   - Necessary data cleaning was performed, including handling missing values and correcting any inconsistencies.
-
-4. **Loading into Database**:
+3. **Loading into Database**:
    - The cleaned data was loaded into a SQLite database for further analysis and processing.
 
 ## Data Usage
@@ -48,4 +45,4 @@ The dataset contains the following columns:
 
 - **Data Size**: The dataset includes multiple entries, with variables spanning text, numbers, and dates.
 
-For more details or to access the dataset, visit the Kaggle dataset page: [Netflix Shows](https://www.kaggle.com/datasets/shivamb/netflix-shows)
+For more details or to access the dataset, visit the Kaggle dataset page: [Netflix Shows](https://www.kaggle.com/datasets/ariyoomotade/netflix-data-cleaning-analysis-and-visualization)
