@@ -2,6 +2,7 @@ from flask import render_template_string
 import sqlite3
 import pandas as pd
 
+@app.route('/data')
 def data():
     # Connect to SQLite database and fetch data
     con = sqlite3.connect('Netflix.db')
