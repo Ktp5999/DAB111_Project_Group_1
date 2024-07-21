@@ -128,7 +128,7 @@ def about():
                 </tbody>
             </table>
 
-            <p><strong>Data Source:</strong> <a href="https://www.kaggle.com/datasets/shivamb/netflix-shows" target="_blank">Kaggle Netflix Dataset</a></p>
+            <p><strong>Data Source:</strong> <a href="https://www.kaggle.com/datasets/ariyoomotade/netflix-data-cleaning-analysis-and-visualization" target="_blank">Kaggle Netflix Dataset</a></p>
         </div>
     </body>
     </html>
