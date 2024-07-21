@@ -1,5 +1,5 @@
 from flask import render_template_string
-
+@app.route('/about')
 def about():
     return render_template_string('''
     <!DOCTYPE html>
